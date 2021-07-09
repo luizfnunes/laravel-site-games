@@ -4,7 +4,7 @@
     <div class="card m-3">
         <header class="card-header">
           <p class="card-header-title is-flex is-justify-content-space-between">
-            Games <button class=" button is-primary is-pulled-right">Insert</button>
+            Games <a href="{{ route('dashboard.create') }}" class=" button is-primary is-pulled-right">Insert</a>
           </p>
         </header>
         <div class="card-content">

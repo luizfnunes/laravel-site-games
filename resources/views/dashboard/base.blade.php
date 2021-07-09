@@ -11,7 +11,7 @@
     <nav class="navbar is-black" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="/">
+                <a class="navbar-item" href="{{ route('dashboard.index') }}">
                     <h2 class="is-size-4 is-uppercase has-text-weight-semibold icon-text"><span>Dashboard</span></h2>
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -45,5 +45,6 @@
         </div>
     </nav>
 @yield('content')
+@yield('scripts')
 </body>
 </html>

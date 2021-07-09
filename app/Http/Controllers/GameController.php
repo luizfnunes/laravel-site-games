@@ -24,7 +24,7 @@ class GameController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
@@ -35,7 +35,15 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            "name"         => "required",
+            "release_date" => "required",
+            "video"        => "required",
+            "price"        => "required",
+            "description"  => "required",
+            "image"        => "required",
+        ]);
+
     }
 
     /**

@@ -19,5 +19,7 @@ Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/auth', 'AuthController@autenticate')->name('auth');
 Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', 'AuthController@index')->name('dashboard.index');
+    Route::get('/dashboard/create', 'GameController@create')->name('dashboard.create');
     Route::post('/logout', 'AuthController@logout')->name('dashboard.logout');
+    Route::post('/dashboard/store', 'GameController@store')->name('dashboard.store');
 });

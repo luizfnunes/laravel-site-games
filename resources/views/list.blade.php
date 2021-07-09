@@ -8,8 +8,9 @@
                     <a href="#">
                         <div class="card m-2">
                             <div class="card-image">
-                                <figure class="image is-4by3 card-game">
-                                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                                <figure class="image card-game">
+                                    {{-- <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"> --}}
+                                    <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/6ae6f5e0e2e090ad91d393562f206c0b.png" alt="Placeholder image">
                                 </figure>
                             </div>
                         </div>
