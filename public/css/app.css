@@ -10360,3 +10360,11 @@ button.card-footer-item {
 button.card-footer-item.has-background-primary-light {
   color: #00d1b2 !important;
 }
+
+#input-file-image {
+  display: none;
+}
+
+#preview-file-image {
+  display: none;
+}

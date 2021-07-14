@@ -2,38 +2,42 @@
 
 @section('content')
     <div class="container mt-4">
-        <div class="columns is-multiline is-mobile">
-            @for ($i = 0; $i < 10; $i++)
-                <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
-                    <a href="#">
-                        <div class="card m-2">
-                            <div class="card-image">
-                                <figure class="image card-game">
-                                    {{-- <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"> --}}
-                                    <img src="https://cdn2.steamgriddb.com/file/sgdb-cdn/grid/6ae6f5e0e2e090ad91d393562f206c0b.png" alt="Placeholder image">
-                                </figure>
+        @if ($countResults > 0)
+            <div class="columns is-multiline is-mobile">
+                @foreach ($games as $game)
+                    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+                        <a href="{{ route('game', ['id' => $game->id]) }}" title="{{ $game->name }}">
+                            <div class="card m-2">
+                                <div class="card-image">
+                                    <figure class="image card-game">
+                                        <img src="{{ asset('storage/' . $game->image) }}" alt="Placeholder image">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            @endfor
-        </div>
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        @else
+            <p>Notting to show!</p>
+        @endif
     </div>
     <div class="container mt-4">
-        <nav class="pagination m-2" role="navigation" aria-label="pagination">
-            <a class="pagination-previous" title="This is the first page" disabled>Página Anterior</a>
-            <a class="pagination-next">Próxima Página</a>
-            <ul class="pagination-list">
-                <li>
-                    <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
-                </li>
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 2">2</a>
-                </li>
-                <li>
-                    <a class="pagination-link" aria-label="Goto page 3">3</a>
-                </li>
-            </ul>
-        </nav>
+        @if ($pages > 0)
+            <nav class="card-footer-item pagination" role="navigation" aria-label="pagination">
+                <a class="pagination-previous" @if ($page == 1) disabled @else href="{{ route('index', $page - 1) }}" @endif>Previous</a>
+                <a class="pagination-next" @if ($page == $pages) disabled @else href="{{ route('index', $page + 1) }}" @endif>Next
+                    page</a>
+                <ul class="pagination-list">
+                    @for ($i = 0; $i < $pages; $i++)
+                        <li>
+                            <a href="{{ route('index', $i + 1) }}" class="pagination-link @if ($i +
+                                1==$page) is-current @endif" aria-label="Page {{ $i + 1 }}"
+                                aria-current="page">{{ $i + 1 }}</a>
+                        </li>
+                    @endfor
+                </ul>
+            </nav>
+        @endif
     </div>
 @endsection

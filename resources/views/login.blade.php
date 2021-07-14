@@ -58,12 +58,6 @@
             </div>
         </div>
     </section>
-<script>
-  var deleteButton = document.querySelector('.delete');
-  deleteButton.addEventListener('click', function(){
-    var element = this.parentElement;
-    element.style.display = 'none';
-  });
-</script>
+<script src="{{ asset('js/close.js') }}"></script>
 </body>
 </html>

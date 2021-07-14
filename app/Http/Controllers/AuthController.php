@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Game;
 
 class AuthController extends Controller
 {
@@ -14,7 +15,7 @@ class AuthController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        
     }
 
     /**
@@ -104,7 +105,7 @@ class AuthController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
