@@ -1,4 +1,4 @@
-# laravel: Site of Games
+# Laravel: Site of Games
 A project writing in laravel framework using bulma css in frontend to practice programming.
 
 # Images
