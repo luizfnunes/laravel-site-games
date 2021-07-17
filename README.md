@@ -1,5 +1,5 @@
 # Laravel: Site of Games
-A project writing in laravel framework using bulma css in frontend to practice programming.
+A project written in php using the laravel framework on the backend and bulma css on the frontend. The main objective is to practice programming using these technologies.
 
 # Images
 ## Index Page
