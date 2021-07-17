@@ -1,5 +1,5 @@
-# laravel-site-games
-A project in laravel to practice programming
+# laravel: Site of Games
+A project writing in laravel framework using bulma css in frontend to practice programming.
 
 # Images
 ## Index Page
